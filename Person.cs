@@ -8,5 +8,6 @@ namespace BethanysPiesShopHRM
 {
     internal class Person
     {
+        public Person() { }
     }
 }
