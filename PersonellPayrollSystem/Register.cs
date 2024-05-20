@@ -9,7 +9,7 @@ namespace PersonellPayrollSystem
     internal class Register
     {
 
-        private Employee[] employeesList = Array.Empty<Employee>();
+        private List<Employee> employeesList = new List<Employee>();
 
         public void addEmplyee()
         {
@@ -20,7 +20,8 @@ namespace PersonellPayrollSystem
             string salaryP = Console.ReadLine();
 
             Employee newEmp = new Employee(nameP, salaryP);
-            employeesList.Append(newEmp);
+            employeesList.Add(newEmp);
+            Console.WriteLine();
         }
 
 
@@ -38,7 +39,7 @@ namespace PersonellPayrollSystem
         
         }
 
-        public int getNumberOfEmployee() => employeesList.Length; 
+        public int getNumberOfEmployee() => employeesList.Count; 
 
     }
 }
